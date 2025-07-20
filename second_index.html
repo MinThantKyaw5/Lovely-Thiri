@@ -23,6 +23,7 @@
       background: #fbe0e7;
       overflow: hidden;
       position: relative;
+      padding: 20px;
     }
 
     section {
@@ -95,6 +96,7 @@
       transform: perspective(1000px);
       box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
       transition: 1s;
+      overflow: hidden;
     }
 
     .card:hover {
@@ -108,9 +110,7 @@
       z-index: 1;
       transform-origin: left;
       transform-style: preserve-3d;
-      background: #000;
       transition: 1s;
-      box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
     }
 
     .card:hover .imgBox {
@@ -150,22 +150,22 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      text-align: center;
     }
 
-    .details .content h4 {
+    .details .content h5 {
       font-family: Georgia, 'Times New Roman', Times, serif;
-      text-align: center;
-      line-height: 1.5em;
       font-size: 1rem;
+      line-height: 1.5em;
     }
 
     @media screen and (max-width: 768px) {
       .card {
         width: 90vw;
-        height: 60vh;
+        height: 70vh;
       }
 
-      .details .content h4 {
+      .details .content h5 {
         font-size: 0.9rem;
       }
 
@@ -173,16 +173,19 @@
         font-size: 1.2rem;
         top: 10px;
       }
+
+      .imgBox img {
+        object-fit: cover;
+      }
     }
   </style>
 </head>
 
 <body>
   <section></section>
-<audio autoplay hidden>
-  <source src="love.m4a" type="audio/mp4">
-  
-</audio>
+  <audio autoplay hidden>
+    <source src="love.m4a" type="audio/mp4">
+  </audio>
 
   <h1 class="click">Pls: Click IMG 💘</h1>
 
@@ -194,17 +197,16 @@
 
     <div class="details">
       <div class="content">
-        <h5 style="font-family: Georgia, 'Times New Roman', Times, serif;">
-          I Really Love You  💖Ma. Thiri💖.<br><br>
+        <h5>
+          I Really Love You 💖Ma. Thiri💖.<br><br>
           You’re my favorite reason to smile.<br><br>
           Place your trust in me, like your brother, like your man.<br><br>
           If there’s a space in your heart,<br><br>
           let me in ..... 💝<br>❣️<br>
-		  It's true that I'm very young,<br><br>
-		  but my love for you is mature.<br><br>
+          It's true that I'm very young,<br><br>
+          but my love for you is mature.<br><br>
           I hope you will allow me to treat you like a lover.<br><br>
           I will be waiting for your answer.<br>❣️
-          
         </h5>
       </div>
     </div>
@@ -231,4 +233,4 @@
     setInterval(createSquare, 150);
   </script>
 </body>
-</html> 
+</html>
