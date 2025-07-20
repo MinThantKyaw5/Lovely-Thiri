@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> I Loving 🎀Thiri🎀 </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #fbe0e7;
+      overflow: hidden;
+      position: relative;
+    }
+
+    section {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    span {
+      position: absolute;
+      pointer-events: none;
+      background: #f00;
+      animation: animate 5s linear infinite;
+      border-radius: 50%;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: scale(0) translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1) translateY(-500%) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .click {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.6rem;
+      font-family: 'Dancing Script', cursive;
+      color: #e21212;
+      text-shadow: 1px 1px 2px #fff, 2px 2px 8px #e21212;
+      background: #fff0f5;
+      padding: 8px 16px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(226, 18, 18, 0.3);
+      animation: fadeIn 2s ease-in-out;
+      z-index: 10;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    .card {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      background: #fff;
+      transform-style: preserve-3d;
+      transform: perspective(1000px);
+      box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+      transition: 1s;
+    }
+
+    .card:hover {
+      transform: translateX(50px);
+    }
+
+    .imgBox {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      transform-origin: left;
+      transform-style: preserve-3d;
+      background: #000;
+      transition: 1s;
+      box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .card:hover .imgBox {
+      transform: rotateY(-180deg);
+    }
+
+    .imgBox img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      backface-visibility: hidden;
+    }
+
+    .imgBox img:nth-child(2) {
+      transform: rotateY(180deg);
+    }
+
+    .details {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e9cdd0;
+      backface-visibility: hidden;
+    }
+
+    .details .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .details .content h4 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-align: center;
+      line-height: 1.5em;
+      font-size: 1rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      .card {
+        width: 90vw;
+        height: 60vh;
+      }
+
+      .details .content h4 {
+        font-size: 0.9rem;
+      }
+
+      .click {
+        font-size: 1.2rem;
+        top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section></section>
+<audio autoplay hidden>
+  <source src="love.m4a" type="audio/mp4">
+  
+</audio>
+
+  <h1 class="click">Pls: Click IMG 💘</h1>
+
+  <div class="card">
+    <div class="imgBox">
+      <img src="img1.jpg" alt="Front Image">
+      <img src="img2.jpg" alt="Back Image">
+    </div>
+
+    <div class="details">
+      <div class="content">
+        <h5 style="font-family: Georgia, 'Times New Roman', Times, serif;">
+          I Really Love You  💖Ma. Thiri💖.<br><br>
+          You’re my favorite reason to smile.<br><br>
+          Place your trust in me, like your brother, like your man.<br><br>
+          If there’s a space in your heart,<br><br>
+          let me in ..... 💝<br>❣️<br>
+		  It's true that I'm very young,<br><br>
+		  but my love for you is mature.<br><br>
+          I hope you will allow me to treat you like a lover.<br><br>
+          I will be waiting for your answer.<br>❣️
+          
+        </h5>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const colors = ['#C51943', '#FBD1C3', '#F5B0C5', '#E38097'];
+
+    function createSquare() {
+      const section = document.querySelector('section');
+      const square = document.createElement('span');
+      let size = Math.random() * 10;
+      square.style.width = 20 + size + 'px';
+      square.style.height = 20 + size + 'px';
+      square.style.top = Math.random() * window.innerHeight + 'px';
+      square.style.left = Math.random() * window.innerWidth + 'px';
+      square.style.background = colors[Math.floor(Math.random() * colors.length)];
+      section.appendChild(square);
+      setTimeout(() => {
+        square.remove();
+      }, 5000);
+    }
+
+    setInterval(createSquare, 150);
+  </script>
+</body>
+</html> 
